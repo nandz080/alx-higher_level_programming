@@ -5,9 +5,9 @@ def divisible_by_2(my_list=[]):
     result = []
     
     # Iterate over the elements of the original list
-    for num in my_list:
+    for num in range(len(my_list)):
         # Check if the number is divisible by 2
-        if num % 2 == 0:
+        if my_list[num] % 2 == 0:
             result.append(True)
         else:
             result.append(False)
