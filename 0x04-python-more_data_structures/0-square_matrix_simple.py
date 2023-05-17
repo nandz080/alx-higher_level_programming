@@ -1,13 +1,5 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    # Create a new matrix of the same size as the input matrix
-    new_matrix = []
-    for row in matrix:
-        new_row = []
-        for num in row:
-            # Square each value and add it to the new row
-            new_row.append(num ** 2)
-        # Add the new row to the new matrix
-        new_matrix.append(new_row)
-    
+    # Use map and lambda function to square each value in the matrix
+    new_matrix = list(map(lambda row: list(map(lambda num: num ** 2, row)), matrix))
     return new_matrix
